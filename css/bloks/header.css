@@ -118,6 +118,10 @@ a {
     }
 }
 .info-hint{
+    position: absolute;
+    top: -26px;
+    left: 50%;
+    transform: translate(-50%, -100%);
     display: flex;
     gap: 8px;
     width: 112px;
@@ -136,8 +140,9 @@ a {
     width: 1px;
 }
 .info-hint__radio:checked +.info-hint__radio-fake{
-    border: 2px solid #e70000;
-
+    background-image: url('./../../assets/icon/Group.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .info-hint__radio-fake{
     width: 24px;
