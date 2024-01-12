@@ -1,0 +1,51 @@
+.nav {
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    gap: 20px;
+    margin-bottom: 186px;
+
+}
+
+.logo {
+    /* центрирует по высоте */
+    align-self: center;
+    color: #FFF;
+    font-weight: 700px;
+    font-size: 28px;
+    letter-spacing: 0.28px;
+    text-transform: capitalize;
+}
+
+.nav-list {
+    align-self: center;
+    /* центрирует по ширине родителя */
+    justify-self: center;
+    font-weight: 500;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+}
+
+
+.cart {
+    align-self: center;
+    justify-self: end;
+    position: relative;
+}
+.cart__count{
+    position: absolute;
+    top:3px;
+    right: -6px;
+      /* ширина по контенту */
+    display: inline-block;
+    height: 25px;
+    background-color: var(--accent);
+    border-radius: 40px;
+    padding: 0 6px;
+    font-weight: 700;
+    line-height: 25px;
+  
+}
