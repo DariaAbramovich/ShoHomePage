@@ -14,9 +14,9 @@
 
 .search-form__input {
     color: #FFF;
-font-size: 18px;
-font-weight: 700;
-line-height: 150%; /* 27px */
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%; /* 27px */
 }
 .search-form__input::placeholder{
     color: #FFF;
