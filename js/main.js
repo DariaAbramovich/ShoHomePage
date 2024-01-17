@@ -21,3 +21,16 @@ function closeHints(){
 for(let hint of infoHints){
     hint.addEventListener('click', (e)=> e.stopPropagation())
 }
+
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 42,   
+    freeMode: true,
+  
+    navigation: {
+      nextEl: '#swiperNext',
+      prevEl: '#swiperPrew',
+    },
+
+  });
