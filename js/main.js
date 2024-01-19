@@ -63,14 +63,21 @@ for(let btn of tabsBtn){
 
         // отображаем нужное и скрываем ненужное
         for(let product of tabProducts){
-            if(product.dataset.tabValue === this.dataset.tab){
+            //делаем проверку на отображение всех товаров
+            if(this.dataset.tab === "all"){
                 product.classList.remove('none')
             }
             else{
-                product.classList.add('none')
+                if(product.dataset.tabValue === this.dataset.tab){
+                    product.classList.remove('none')
+                }
+                else{
+                    product.classList.add('none')
+                }
             }
-
            
         }
+        //обновляем свайпер
+        swiper.update()
     })
 }
