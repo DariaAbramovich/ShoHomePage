@@ -49,3 +49,58 @@
     line-height: 25px;
   
 }
+.nav-list__link{
+    transition:  opacity 0.2s ease-in;
+}
+.nav-list__link, .dropdown{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nav-list__link:hover{
+    opacity: 0.8;
+}
+
+.dropdown::after{
+    content: url('./../../assets/icon/Group.svg');
+}
+.nav-list__item{
+    position: relative;
+    padding-bottom: 10px;
+}
+.nav-list__sub-nav{
+    /* скрываем список  */
+    opacity: 0;
+    pointer-events: none;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+    top: calc(100%);
+
+    transform: translate(0%, 10%);
+    transition: all 0.2s ease-in;
+}
+.nav-list__item:hover .nav-list__sub-nav {
+    /* показываем список */
+    pointer-events: all;
+    opacity: 1;
+  
+    transform: translate(0%, 0%);
+}
+.sub-nav{
+    padding: 20px;
+    border-radius: 16px;
+    background-color: var(--footer-bg);
+    color: #FFF;
+}
+.sub-nav__item>a{
+    padding: 10px;
+}
+.sub-nav__link{
+    display: grid;
+    gap: 50px;
+}
+.sub-nav__link:hover{
+    color: var(--accent);
+}
