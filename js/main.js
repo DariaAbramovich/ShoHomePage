@@ -27,6 +27,21 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 4,
     spaceBetween: 42,   
     freeMode: true,
+
+    // breakpoints:{
+    //     640:{
+    //         slidesPerView: 2,
+    //         spaceBetween: 20,   
+    //     },
+    //     640:{
+    //         slidesPerView: 4,
+    //         spaceBetween: 40,   
+    //     },
+    //     640:{
+    //         slidesPerView: 5,
+    //         spaceBetween: 50,   
+    //     },
+    // },
   
     navigation: {
       nextEl: '#swiperNext',
@@ -34,3 +49,28 @@ const swiper = new Swiper('.swiper', {
     },
 
   });
+
+//   tabs
+
+const tabsBtn = document.querySelectorAll('[data-tab]')
+const tabProducts = document.querySelectorAll('[data-tab-value]')
+for(let btn of tabsBtn){
+    btn.addEventListener('click', function(){
+        for(let btn of tabsBtn){
+            btn.classList.remove('active-btn')
+        }   
+        this.classList.add('active-btn')
+
+        // отображаем нужное и скрываем ненужное
+        for(let product of tabProducts){
+            if(product.dataset.tabValue === this.dataset.tab){
+                product.classList.remove('none')
+            }
+            else{
+                product.classList.add('none')
+            }
+
+           
+        }
+    })
+}
